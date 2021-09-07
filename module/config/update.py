@@ -1,7 +1,7 @@
 # -*- encoding=utf8 -*-
 
 """
-copy from LmeSzinc/AzurLaneAutoScript module/config/update.py
+modify from LmeSzinc/AzurLaneAutoScript module/config/update.py
 """
 
 import codecs

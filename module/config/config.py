@@ -1,7 +1,9 @@
 # -*- encoding=utf8 -*-
 
 """
-copy from LmeSzinc/AzurLaneAutoScript module/config/config.py
+modify from LmeSzinc/AzurLaneAutoScript
+            module/config/config.py
+            module/config/dictionary.py
 """
 
 import codecs
@@ -20,6 +22,8 @@ class Config:
     config = configparser.ConfigParser(interpolation=None)
 
     # Global
+    PORT = 80
+    DEBUG = False
     PASSWORD = ''
     AES_KEY = '123456789abc'
 
@@ -31,6 +35,7 @@ class Config:
 
     # Vaptcha
     VID = ''
+    KEY = ''
     SERVER = ''
     SCENE = 1
 
@@ -74,6 +79,8 @@ class Config:
 
         # Global
         option = config['Global']
+        self.PORT = int(option['port'])
+        self.DEBUG = to_bool(option['debug'])
         self.PASSWORD = option['password']
         self.AES_KEY = option['aes_key']
 
@@ -87,6 +94,7 @@ class Config:
         # Vaptcha
         option = config['Vaptcha']
         self.VID = option['VID']
+        self.KEY = option['Key']
         self.SERVER = option['server']
         self.SCENE = int(option['scene'])
 
