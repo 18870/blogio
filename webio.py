@@ -2,7 +2,7 @@
 from os import path
 
 from module.config.config import config
-from pywebio.platform.utils import _here_dir, _index_page_tpl
+from pywebio.platform.page import _here_dir, _index_page_tpl
 from pywebio.platform.fastapi import start_server
 
 # Replace template
